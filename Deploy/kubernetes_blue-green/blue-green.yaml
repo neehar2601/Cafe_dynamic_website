@@ -1,0 +1,21 @@
+apiVersion: flagger.app/v1beta1
+kind: Canary
+metadata:
+  name: cafeweb
+  namespace: cafeapp
+spec:
+  targetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cafeweb
+  service:
+    port: 80
+    portName: http
+  strategy: BlueGreen
+  blueGreenAnalysis:
+    interval: 1m
+    threshold: 10
+    maxWeight: 100
+    metrics:
+      - name: request-success-rate
+        threshold: 99
