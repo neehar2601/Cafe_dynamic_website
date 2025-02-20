@@ -1,7 +1,7 @@
 replicaCount: 1
 
 mysql:
-  image: bacdocker/mompopcafedb:v1
+  image: bacdocker/mompopcafedb:v2
   database: mom_pop_db
   user: root
 
