@@ -1,13 +1,13 @@
 replicaCount: 1
 
 mysql:
-  image: bacdocker/mompopcafedb:v2
+  image: bacdocker/mompopcafedb:v1
   database: mom_pop_db
   user: root
 
 cafeweb:
   image: bacdocker/mompopcafeapp
-  tag: v4
+  tag: v2
 
 persistentVolume:
   size: 10Gi
