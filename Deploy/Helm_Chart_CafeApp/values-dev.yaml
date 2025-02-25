@@ -1,7 +1,7 @@
 replicaCount: 1
 
 mysql:
-  image: sreedocker123/mompopcafedb:v1
+  image: neehar2601/cafe_dynamic_db:v1
   database: mom_pop_db
   user: root
 
